@@ -6,17 +6,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ChanceTest {
-
-	@Test
-	void ShouldGiveTheValueRepresentationOfTheChance() throws InvalidProbability {
-		Chance chance = Chance.createChance(0.5);
-		assertEquals(0.5, chance.chance());
-	}
-
 	@Test
 	void ShouldGiveTheValueRepresentationOfNotHavingChance() throws InvalidProbability {
 		Chance chance = Chance.createChance(0.25);
-		assertEquals(0.75, chance.noChance());
+		assertEquals(0.75, chance.not());
 	}
 
 	@Test

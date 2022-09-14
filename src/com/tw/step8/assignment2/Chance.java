@@ -19,19 +19,15 @@ public class Chance {
 		return new Chance(probability);
 	}
 
-	public double chance() {
-		return this.probability;
-	}
-
-	public double noChance() {
+	public double not() {
 		return 1 - this.probability;
 	}
 
 	public double and(Chance otherChance) {
-		return otherChance.chance() * this.probability;
+		return otherChance.probability * this.probability;
 	}
 
 	public double or(Chance otherChance) {
-		return 1 - (this.noChance() * otherChance.noChance());
+		return 1 - (this.not() * otherChance.not());
 	}
 }
