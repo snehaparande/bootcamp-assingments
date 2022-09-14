@@ -10,4 +10,10 @@ class RectangleTest {
         Rectangle rectangle = new Rectangle(3, 4);
         assertEquals(12, rectangle.area());
     }
+
+    @Test
+    void ShouldGivePerimeterOfTheRectangle() {
+        Rectangle rectangle = new Rectangle(3, 4);
+        assertEquals(14, rectangle.perimeter());
+    }
 }
