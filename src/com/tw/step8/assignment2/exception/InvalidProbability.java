@@ -1,4 +1,4 @@
-package com.tw.step8.assignment2;
+package com.tw.step8.assignment2.exception;
 
 public class InvalidProbability extends Throwable {
 	public InvalidProbability() {
