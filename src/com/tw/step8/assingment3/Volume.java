@@ -44,4 +44,12 @@ public class Volume {
     private Double covertGallonToLiters(Double value) {
         return value * 3.785;
     }
+
+    public Volume add(Volume otherVolume) {
+        Double stdOtherVolume = this.convert(otherVolume.unit, otherVolume.value);
+        Double stdVolume = this.convert(this.unit, this.value);
+        Double result = stdVolume + stdOtherVolume;
+
+        return new Volume(result, Unit.LITERS);
+    }
 }
