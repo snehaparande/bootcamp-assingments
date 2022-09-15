@@ -1,44 +1,44 @@
 package com.tw.step8.assignment2;
 
-import com.tw.step8.assignment2.exception.InvalidProbability;
+import com.tw.step8.assignment2.exception.InvalidProbabilityException;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class ChanceTest {
 	@Test
-	void ShouldGiveTheValueRepresentationOfNotHavingChance() throws InvalidProbability {
-		Chance chance = Chance.createChance(0.25);
-		assertEquals(0.75, chance.not());
+	void shouldReturnNotOfAChance() throws InvalidProbabilityException {
+		Chance OneOnDice = Chance.createChance(1.0/6);
+		assertEquals(0.8333, OneOnDice.not(), 0.001);
 	}
 
 	@Test
-	void ShouldThrowInvalidProbabilityException() {
-		try {
-			Chance chance = Chance.createChance(2);
-		} catch (InvalidProbability e) {
-			assertEquals("Probability should be between 0 and 1", e.getMessage());
-		}
-
+	void shouldThrowExceptionWhenProbabilityIsMoreThanOne() {
+		assertThrows(InvalidProbabilityException.class, () -> Chance.createChance(2));
 	}
 
 	@Test
-	void ShouldGiveTheChanceOfTwoEvents() throws InvalidProbability {
+	void shouldThrowExceptionWhenProbabilityIsLessThanZero() {
+		assertThrows(InvalidProbabilityException.class, () -> Chance.createChance(-1));
+	}
+
+	@Test
+	void shouldReturnCombinationOfTwoChances() throws InvalidProbabilityException {
 		Chance tails = Chance.createChance(0.5);
-		Chance evenDice = Chance.createChance(0.5);
+		Chance OneOnDice = Chance.createChance(1.0/6);
 
-		assertEquals(0.25, tails.and(evenDice));
+		assertEquals(0.0833, tails.and(OneOnDice), 0.001);
 	}
 
 	@Test
-	void ShouldGiveTheChanceOfEitherEvent() throws InvalidProbability {
-		Chance firstDice1 = Chance.createChance((double) 1/6);
-		Chance secondDice1 = Chance.createChance((double) 1/6);
+	void shouldReturnOrOfTwoChances() throws InvalidProbabilityException {
+		Chance firstDice1 = Chance.createChance( 1.0/6);
+		Chance secondDice1 = Chance.createChance( 1.0/6);
 
 		Chance firstTails = Chance.createChance(0.5);
 		Chance secondTails = Chance.createChance(0.5);
 
-		assertEquals(0.30555, firstDice1.or(secondDice1), 0.01);
+		assertEquals(0.3055, firstDice1.or(secondDice1), 0.001);
 		assertEquals(0.75, firstTails.or(secondTails));
 	}
 }

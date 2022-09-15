@@ -1,6 +1,6 @@
 package com.tw.step8.assignment2;
 
-import com.tw.step8.assignment2.exception.InvalidProbability;
+import com.tw.step8.assignment2.exception.InvalidProbabilityException;
 
 public class Chance {
 
@@ -11,9 +11,9 @@ public class Chance {
 		this.probability = probability;
 	}
 
-	public static Chance createChance(double probability) throws InvalidProbability {
+	public static Chance createChance(double probability) throws InvalidProbabilityException {
 		if (probability > 1 || probability < 0) {
-			throw new InvalidProbability();
+			throw new InvalidProbabilityException();
 		}
 
 		return new Chance(probability);
@@ -24,7 +24,7 @@ public class Chance {
 	}
 
 	public double and(Chance otherChance) {
-		return otherChance.probability * this.probability;
+ 		return otherChance.probability * this.probability;
 	}
 
 	public double or(Chance otherChance) {
