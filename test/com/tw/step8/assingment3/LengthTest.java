@@ -40,7 +40,7 @@ class LengthTest {
     @Test
     void compareEqualLengthsInInchAndCm() {
         Length length1 = new Length(2.0, Unit.INCH);
-        Length length2 = new Length(5.08, Unit.CM);
+        Length length2 = new Length(5.0, Unit.CM);
 
         assertEquals(0, length1.compare(length2));
     }
@@ -48,7 +48,7 @@ class LengthTest {
     @Test
     void compareUnEqualLengthsInInchAndCm() {
         Length length1 = new Length(2.0, Unit.INCH);
-        Length length2 = new Length(5.0, Unit.CM);
+        Length length2 = new Length(4.0, Unit.CM);
 
         assertEquals(1, length1.compare(length2));
     }
@@ -83,6 +83,26 @@ class LengthTest {
         Length length2 = new Length(4.0, Unit.INCH);
 
         assertEquals(1, length1.compare(length2));
+    }
+
+    @Test
+    void shouldAddTwoLengthsInInches() {
+        Length length1 = new Length(1.0, Unit.INCH);
+        Length length2 = new Length(1.0, Unit.INCH);
+
+        Length expected = new Length(2.0, Unit.INCH);
+
+        assertEquals(0, expected.compare(length1.add(length2)));
+    }
+
+    @Test
+    void shouldAddTwoLengthsOfAnyUnits() {
+        Length length1 = new Length(2.0, Unit.INCH);
+        Length length2 = new Length(2.5, Unit.CM);
+
+        Length expected = new Length(3.0, Unit.INCH);
+
+        assertEquals(0, expected.compare(length1.add(length2)));
     }
 
 }

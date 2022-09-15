@@ -46,10 +46,17 @@ public class Length {
     }
 
     private Double convertCmToInch(Double cm) {
-        return cm / 2.54;
+        return cm / 2.5;
     }
 
     private Double convertFeetToInch(Double feet) {
         return feet * 12;
+    }
+
+    public Length add(Length otherLength) {
+        Double stdOtherLength = this.convert(otherLength.unit, otherLength.value);
+        Double stdLength = this.convert(this.unit, this.value);
+        Double result = stdLength + stdOtherLength;
+        return new Length(result, Unit.INCH);
     }
 }
