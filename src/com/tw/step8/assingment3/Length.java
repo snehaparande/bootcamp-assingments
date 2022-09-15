@@ -42,7 +42,7 @@ public class Length {
     }
 
     private Double covertMmToInch(Double mm) {
-        return mm / 25.4;
+        return mm / 25;
     }
 
     private Double convertCmToInch(Double cm) {

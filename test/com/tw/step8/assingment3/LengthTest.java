@@ -68,4 +68,21 @@ class LengthTest {
 
         assertEquals(1, length1.compare(length2));
     }
+
+    @Test
+    void compareEqualLengthsInMmAndInch() {
+        Length length1 = new Length(100.0, Unit.MM);
+        Length length2 = new Length(4.0, Unit.INCH);
+
+        assertEquals(0, length1.compare(length2));
+    }
+
+    @Test
+    void compareUnEqualLengthsInMmAndInch() {
+        Length length1 = new Length(105.0, Unit.MM);
+        Length length2 = new Length(4.0, Unit.INCH);
+
+        assertEquals(1, length1.compare(length2));
+    }
+
 }
