@@ -1,5 +1,7 @@
 package com.tw.step8.assignment4;
 
+import com.tw.step8.assignment4.exception.NoAvailableSpaceException;
+
 import java.util.ArrayList;
 
 public class ParkingLot {
@@ -14,7 +16,11 @@ public class ParkingLot {
 		this.capacity = capacity;
 	}
 
-	public Integer park(Vehicle vehicle) {
+	public Integer add(Vehicle vehicle) throws NoAvailableSpaceException {
+		if (this.isFull()) {
+			throw new NoAvailableSpaceException(this.ID);
+		}
+
 		this.spaces.add(vehicle);
 		return newToken();
 	}

@@ -18,4 +18,8 @@ public class ParkingLots {
 		int currentLotID = this.lots.size();
 		this.lots.add(new ParkingLot(currentLotID,capacity));
 	}
+
+	public ParkingLot getLot(Integer lotID) {
+		return this.lots.get(lotID);
+	}
 }
