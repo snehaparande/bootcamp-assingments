@@ -15,9 +15,13 @@ class ParkingLotTest {
 
 	@Test
 	void validateWhetherTheLotIsFull() {
-		ParkingLot parkingLot = new ParkingLot(1);
-		parkingLot.park(Vehicle.CAR);
+		ParkingLot parkingLotLimitOfOne = new ParkingLot(1);
+		parkingLotLimitOfOne.park(Vehicle.CAR);
 
-		assertTrue(parkingLot.isFull());
+		ParkingLot parkingLotLimitOfFive = new ParkingLot(5);
+		parkingLotLimitOfFive.park(Vehicle.CAR);
+
+		assertTrue(parkingLotLimitOfOne.isFull());
+		assertFalse(parkingLotLimitOfFive.isFull());
 	}
 }

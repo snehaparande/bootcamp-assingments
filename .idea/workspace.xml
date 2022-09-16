@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45fb0829-2930-4a50-b695-3392ea0efc3e" name="Changes" comment="Introduced Rectangle entity which can give area.">
-      <change afterPath="$PROJECT_DIR$/src/com/tw/step8/assignment4/ParkingLot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/tw/step8/assignment4/Vehicle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/com/tw/step8/assignment4/ParkingLotTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/tw/step8/assingment3/Length.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tw/step8/assignment3/Length.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/tw/step8/assingment3/Unit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tw/step8/assignment3/Unit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/tw/step8/assingment3/Volume.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tw/step8/assignment3/Volume.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/tw/step8/assingment3/LengthTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/tw/step8/assingment3/LengthTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/tw/step8/assingment3/VolumeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/tw/step8/assingment3/VolumeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/tw/step8/assignment4/ParkingLot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tw/step8/assignment4/ParkingLot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/tw/step8/assignment4/ParkingLotTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/tw/step8/assignment4/ParkingLotTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

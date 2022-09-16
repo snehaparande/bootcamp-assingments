@@ -5,9 +5,11 @@ import java.util.ArrayList;
 public class ParkingLot {
 
 	private final ArrayList<Vehicle> spaces;
+	private final int lotLimit;
 
 	public ParkingLot(int lotLimit) {
 		this.spaces = new ArrayList<>(lotLimit);
+		this.lotLimit = lotLimit;
 	}
 
 	public Integer park(Vehicle vehicle) {
@@ -20,6 +22,6 @@ public class ParkingLot {
 	}
 
 	public boolean isFull() {
-		return true;
+		return this.spaces.size() == this.lotLimit;
 	}
 }
