@@ -6,9 +6,7 @@ import java.util.ArrayList;
 
 public class ParkingLots {
 	ArrayList<ParkingLot> lots;
-	Assistant assistant;
 	public ParkingLots() {
-		this.assistant = new Assistant();
 		this.lots = new ArrayList<>();
 	}
 

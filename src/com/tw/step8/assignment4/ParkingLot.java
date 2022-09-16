@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 public class ParkingLot {
 
-	private final int ID;
+	protected final int ID;
 	private final ArrayList<Vehicle> spaces;
-	private final int capacity;
+	protected final int capacity;
 
 	public ParkingLot(int ID, int capacity) {
 		this.ID = ID;
