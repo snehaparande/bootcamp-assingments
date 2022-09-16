@@ -4,10 +4,12 @@ import java.util.ArrayList;
 
 public class ParkingLot {
 
+	private final int ID;
 	private final ArrayList<Vehicle> spaces;
 	private final int lotLimit;
 
-	public ParkingLot(int lotLimit) {
+	public ParkingLot(int ID, int lotLimit) {
+		this.ID = ID;
 		this.spaces = new ArrayList<>(lotLimit);
 		this.lotLimit = lotLimit;
 	}

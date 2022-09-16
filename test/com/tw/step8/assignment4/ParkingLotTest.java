@@ -8,17 +8,17 @@ class ParkingLotTest {
 
 	@Test
 	void shouldParkACarAndIssueAToken() {
-		ParkingLot parkingLot = new ParkingLot(5);
+		ParkingLot parkingLot = new ParkingLot(1,5);
 
 		assertEquals(1, parkingLot.park(Vehicle.CAR));
 	}
 
 	@Test
 	void validateWhetherTheLotIsFull() {
-		ParkingLot parkingLotLimitOfOne = new ParkingLot(1);
+		ParkingLot parkingLotLimitOfOne = new ParkingLot(1, 1);
 		parkingLotLimitOfOne.park(Vehicle.CAR);
 
-		ParkingLot parkingLotLimitOfFive = new ParkingLot(5);
+		ParkingLot parkingLotLimitOfFive = new ParkingLot(2, 5);
 		parkingLotLimitOfFive.park(Vehicle.CAR);
 
 		assertTrue(parkingLotLimitOfOne.isFull());

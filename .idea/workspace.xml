@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45fb0829-2930-4a50-b695-3392ea0efc3e" name="Changes" comment="Introduced Rectangle entity which can give area.">
+      <change afterPath="$PROJECT_DIR$/src/com/tw/step8/assignment4/ParkingLots.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tw/step8/assignment4/exception/InvalidLotCapacityException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/com/tw/step8/assignment4/ParkingLotsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/tw/step8/assignment4/ParkingLot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tw/step8/assignment4/ParkingLot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/com/tw/step8/assignment4/ParkingLotTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/tw/step8/assignment4/ParkingLotTest.java" afterDir="false" />
@@ -15,9 +18,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
-        <option value="JUnit5 Test Class" />
         <option value="Enum" />
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
