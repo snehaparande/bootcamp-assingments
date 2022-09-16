@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45fb0829-2930-4a50-b695-3392ea0efc3e" name="Changes" comment="Introduced Rectangle entity which can give area.">
-      <change afterPath="$PROJECT_DIR$/src/com/tw/step8/assignment4/Recipients.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/tw/step8/assignment4/Notifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tw/step8/assignment4/Notifier.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/tw/step8/assignment4/ParkingLot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tw/step8/assignment4/ParkingLot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/tw/step8/assignment4/ParkingLots.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tw/step8/assignment4/ParkingLots.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/tw/step8/assignment4/AssistantTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/tw/step8/assignment4/AssistantTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/tw/step8/assignment4/AttendantTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/tw/step8/assignment4/AttendantTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/tw/step8/assignment4/NotifierTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/tw/step8/assignment4/NotifierTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/tw/step8/assignment4/ParkingLotTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/tw/step8/assignment4/ParkingLotTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/tw/step8/assignment4/ParkingLotsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/tw/step8/assignment4/ParkingLotsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

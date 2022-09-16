@@ -9,12 +9,14 @@ public class ParkingLot {
 	protected final int ID;
 	private final ArrayList<Vehicle> spaces;
 	protected final int capacity;
+	private final Notifier notifier;
 	protected LotStatus status;
 
 	public ParkingLot(int ID, int capacity, Notifier notifier) {
 		this.ID = ID;
 		this.spaces = new ArrayList<>(capacity);
 		this.capacity = capacity;
+		this.notifier = notifier;
 		this.status = LotStatus.PROMOTABLE;
 	}
 
@@ -25,7 +27,12 @@ public class ParkingLot {
 
 		this.spaces.add(vehicle);
 		this.updateStatus();
+		this.notifyRecipients();
 		return newToken();
+	}
+
+	private void notifyRecipients() {
+		this.notifier.notify(this.ID, this.status);
 	}
 
 	private void updateStatus() {
@@ -35,7 +42,7 @@ public class ParkingLot {
 		if (currentCapacity < 80 ) {
 			this.status = LotStatus.TRAINEE_HANDLEABLE;
 			return;
-		};
+		}
 
 		this.status = LotStatus.TAXABLE;
 	}
