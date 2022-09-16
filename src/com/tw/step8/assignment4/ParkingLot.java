@@ -6,12 +6,12 @@ public class ParkingLot {
 
 	private final int ID;
 	private final ArrayList<Vehicle> spaces;
-	private final int lotLimit;
+	private final int capacity;
 
-	public ParkingLot(int ID, int lotLimit) {
+	public ParkingLot(int ID, int capacity) {
 		this.ID = ID;
-		this.spaces = new ArrayList<>(lotLimit);
-		this.lotLimit = lotLimit;
+		this.spaces = new ArrayList<>(capacity);
+		this.capacity = capacity;
 	}
 
 	public Integer park(Vehicle vehicle) {
@@ -24,6 +24,14 @@ public class ParkingLot {
 	}
 
 	public boolean isFull() {
-		return this.spaces.size() == this.lotLimit;
+		return this.spaces.size() == this.capacity;
+	}
+
+	public boolean canTraineeHandle() {
+		return this.currentCapacityPercent() < 80;
+	}
+
+	private int currentCapacityPercent() {
+		return (this.spaces.size() * 100) / this.capacity;
 	}
 }

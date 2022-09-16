@@ -24,4 +24,16 @@ class ParkingLotTest {
 		assertTrue(parkingLotLimitOfOne.isFull());
 		assertFalse(parkingLotLimitOfFive.isFull());
 	}
+
+	@Test
+	void validateWhetherTheLotCanBeHandleByATrainee() {
+		ParkingLot parkingLotLimitOfFive = new ParkingLot(1, 5);
+		parkingLotLimitOfFive.park(Vehicle.CAR);
+
+		ParkingLot parkingLotLimitOfOne = new ParkingLot(1, 1);
+		parkingLotLimitOfOne.park(Vehicle.CAR);
+
+		assertTrue(parkingLotLimitOfFive.canTraineeHandle());
+		assertFalse(parkingLotLimitOfOne.canTraineeHandle());
+	}
 }
