@@ -5,8 +5,11 @@ import com.tw.step8.assignment4.exception.InvalidLotCapacityException;
 import java.util.ArrayList;
 
 public class ParkingLots {
-	ArrayList<ParkingLot> lots;
-	public ParkingLots() {
+	private final Notifier notifier;
+	protected ArrayList<ParkingLot> lots;
+
+	public ParkingLots(Notifier notifier) {
+		this.notifier = notifier;
 		this.lots = new ArrayList<>();
 	}
 
@@ -16,7 +19,7 @@ public class ParkingLots {
 		}
 
 		int currentLotID = this.lots.size();
-		this.lots.add(new ParkingLot(currentLotID,capacity));
+		this.lots.add(new ParkingLot(currentLotID, capacity, notifier));
 	}
 
 	public ParkingLot getLot(Integer lotID) {

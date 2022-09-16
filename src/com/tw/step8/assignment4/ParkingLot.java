@@ -11,7 +11,7 @@ public class ParkingLot {
 	protected final int capacity;
 	protected LotStatus status;
 
-	public ParkingLot(int ID, int capacity) {
+	public ParkingLot(int ID, int capacity, Notifier notifier) {
 		this.ID = ID;
 		this.spaces = new ArrayList<>(capacity);
 		this.capacity = capacity;

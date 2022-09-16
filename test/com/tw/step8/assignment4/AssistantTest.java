@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class AssistantTest {
 	@Test
 	void shouldDisplayTheCurrentParkingLotsStatus() throws InvalidLotCapacityException {
-		ParkingLots parkingLots = new ParkingLots();
+		ParkingLots parkingLots = new ParkingLots(new Notifier(new Recipients[]{}));
 		Assistant assistant = new Assistant(parkingLots);
 
 		parkingLots.addLot(1);

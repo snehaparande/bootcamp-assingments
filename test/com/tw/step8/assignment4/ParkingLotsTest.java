@@ -8,8 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class ParkingLotsTest {
 	@Test
 	void shouldThrowInvalidCapacityExceptionOnInvalidCapacity() {
-		ParkingLots parkingLots = new ParkingLots();
-
+		ParkingLots parkingLots = new ParkingLots(new Notifier(new Recipients[]{}));
 		assertThrows(InvalidLotCapacityException.class,() -> parkingLots.addLot(0));
 	}
 }

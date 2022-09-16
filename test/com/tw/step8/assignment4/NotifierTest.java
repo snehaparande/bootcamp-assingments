@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class NotifierTest {
 	@Test
 	void shouldNotifyTheGivenStatus() {
-		Notifier notifier = new Notifier();
-		assertEquals("Notified",notifier.notify(LotStatus.TAXABLE));
+		Notifier notifier = new Notifier(new Recipients[]{});
+		assertTrue(notifier.notify(1, LotStatus.TAXABLE));
 	}
 }

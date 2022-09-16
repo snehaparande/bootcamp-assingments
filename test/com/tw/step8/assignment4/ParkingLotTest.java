@@ -9,17 +9,17 @@ class ParkingLotTest {
 
 	@Test
 	void shouldParkACarAndIssueAToken() throws NoAvailableSpaceException {
-		ParkingLot parkingLot = new ParkingLot(1,5);
+		ParkingLot parkingLot = new ParkingLot(1,5, new Notifier(new Recipients[]{}));
 
 		assertEquals(1, parkingLot.add(Vehicle.CAR));
 	}
 
 	@Test
 	void validateWhetherTheLotIsFull() throws NoAvailableSpaceException {
-		ParkingLot parkingLotLimitOfOne = new ParkingLot(1, 1);
+		ParkingLot parkingLotLimitOfOne = new ParkingLot(1, 1, new Notifier(new Recipients[]{}));
 		parkingLotLimitOfOne.add(Vehicle.CAR);
 
-		ParkingLot parkingLotLimitOfFive = new ParkingLot(2, 5);
+		ParkingLot parkingLotLimitOfFive = new ParkingLot(2, 5, new Notifier(new Recipients[]{}));
 		parkingLotLimitOfFive.add(Vehicle.CAR);
 
 		assertTrue(parkingLotLimitOfOne.isFull());
@@ -28,10 +28,10 @@ class ParkingLotTest {
 
 	@Test
 	void validateWhetherTheLotCanBeHandleByATrainee() throws NoAvailableSpaceException {
-		ParkingLot parkingLotLimitOfFive = new ParkingLot(1, 5);
+		ParkingLot parkingLotLimitOfFive = new ParkingLot(1, 5, new Notifier(new Recipients[]{}));
 		parkingLotLimitOfFive.add(Vehicle.CAR);
 
-		ParkingLot parkingLotLimitOfOne = new ParkingLot(1, 1);
+		ParkingLot parkingLotLimitOfOne = new ParkingLot(1, 1, new Notifier(new Recipients[]{}));
 		parkingLotLimitOfOne.add(Vehicle.CAR);
 
 		assertTrue(parkingLotLimitOfFive.canTraineeHandle());
@@ -40,7 +40,7 @@ class ParkingLotTest {
 
 	@Test
 	void shouldThrowNoAvailableSpaceException() throws NoAvailableSpaceException {
-		ParkingLot parkingLotLimitOfOne = new ParkingLot(1, 1);
+		ParkingLot parkingLotLimitOfOne = new ParkingLot(1, 1, new Notifier(new Recipients[]{}));
 		parkingLotLimitOfOne.add(Vehicle.CAR);
 
 		assertThrows(NoAvailableSpaceException.class, () -> parkingLotLimitOfOne.add(Vehicle.CAR));
@@ -49,7 +49,7 @@ class ParkingLotTest {
 
 	@Test
 	void shouldUpdateTheLotStateToTraineeHandleable() throws NoAvailableSpaceException {
-		ParkingLot parkingLotLimitOfTwo = new ParkingLot(1, 2);
+		ParkingLot parkingLotLimitOfTwo = new ParkingLot(1, 2, new Notifier(new Recipients[]{}));
 		parkingLotLimitOfTwo.add(Vehicle.CAR);
 
 		assertEquals(LotStatus.TRAINEE_HANDLEABLE, parkingLotLimitOfTwo.status);
@@ -57,7 +57,7 @@ class ParkingLotTest {
 
 	@Test
 	void shouldUpdateTheLotStateToTaxable() throws NoAvailableSpaceException {
-		ParkingLot parkingLotLimitOfTwo = new ParkingLot(1, 1);
+		ParkingLot parkingLotLimitOfTwo = new ParkingLot(1, 1, new Notifier(new Recipients[]{}));
 		parkingLotLimitOfTwo.add(Vehicle.CAR);
 
 		assertEquals(LotStatus.TAXABLE, parkingLotLimitOfTwo.status);
