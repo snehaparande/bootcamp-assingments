@@ -47,5 +47,20 @@ class ParkingLotTest {
 
 	}
 
+	@Test
+	void shouldUpdateTheLotStateToTraineeHandleable() throws NoAvailableSpaceException {
+		ParkingLot parkingLotLimitOfTwo = new ParkingLot(1, 2);
+		parkingLotLimitOfTwo.add(Vehicle.CAR);
+
+		assertEquals(LotStatus.TRAINEE_HANDLEABLE, parkingLotLimitOfTwo.status);
+	}
+
+	@Test
+	void shouldUpdateTheLotStateToTaxable() throws NoAvailableSpaceException {
+		ParkingLot parkingLotLimitOfTwo = new ParkingLot(1, 1);
+		parkingLotLimitOfTwo.add(Vehicle.CAR);
+
+		assertEquals(LotStatus.TAXABLE, parkingLotLimitOfTwo.status);
+	}
 
 }

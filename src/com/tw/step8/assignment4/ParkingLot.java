@@ -9,11 +9,13 @@ public class ParkingLot {
 	protected final int ID;
 	private final ArrayList<Vehicle> spaces;
 	protected final int capacity;
+	protected LotStatus status;
 
 	public ParkingLot(int ID, int capacity) {
 		this.ID = ID;
 		this.spaces = new ArrayList<>(capacity);
 		this.capacity = capacity;
+		this.status = LotStatus.PROMOTABLE;
 	}
 
 	public Integer add(Vehicle vehicle) throws NoAvailableSpaceException {
@@ -22,7 +24,20 @@ public class ParkingLot {
 		}
 
 		this.spaces.add(vehicle);
+		this.updateStatus();
 		return newToken();
+	}
+
+	private void updateStatus() {
+		int currentCapacity = currentCapacityPercent();
+
+		if (currentCapacity < 20) return;
+		if (currentCapacity < 80 ) {
+			this.status = LotStatus.TRAINEE_HANDLEABLE;
+			return;
+		};
+
+		this.status = LotStatus.TAXABLE;
 	}
 
 	private Integer newToken() {
