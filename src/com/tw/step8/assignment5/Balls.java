@@ -37,23 +37,6 @@ public class Balls implements Countable {
     }
 
     public boolean add(Ball ball) throws AddBallException {
-        if (this.isFull()) {
-            throw new BagLimitExceededException();
-        }
-        
-        int presentNoOfBalls = this.getSizeOf(ball.getColor());
-        if (presentNoOfBalls == ball.getMaxCapacity()) {
-            throw new IdenticalBallLimitExceededException(ball.getColor());
-        }
-
-        int noOfGreenBalls = this.getSizeOf(Color.GREEN);
-        int noOfRedBalls = this.getSizeOf(Color.RED);
-
-        if (ball.getColor() == Color.RED && noOfGreenBalls * 2 == noOfRedBalls) {
-            throw new RedBallSizeExceededException();
-        }
-
-
         return this.balls.add(ball);
     }
 

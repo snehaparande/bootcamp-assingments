@@ -11,6 +11,8 @@ public class Bag {
     }
 
     public boolean add(Ball ball) throws AddBallException {
+        Color color = ball.getColor();
+        color.validateAdditionOfNewBall(balls);
         return this.balls.add(ball);
     }
 
