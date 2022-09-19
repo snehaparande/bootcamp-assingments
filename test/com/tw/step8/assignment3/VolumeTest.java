@@ -1,4 +1,4 @@
-package com.tw.step8.assingment3;
+package com.tw.step8.assignment3;
 
 import org.junit.jupiter.api.Test;
 

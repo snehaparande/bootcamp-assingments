@@ -5,6 +5,10 @@
       <change afterPath="$PROJECT_DIR$/src/com/tw/step8/assignment5/Bag.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/test/com/tw/step8/assignment5/BagTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/src/com/tw/step8/assignment4/ParkingLot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tw/step8/assignment4/ParkingLot.java" afterDir="false" />
+>>>>>>> 989d404d1e652ffcd75df2fb1a8fc757c57386fa
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,10 +18,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
         <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -49,7 +53,12 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+<<<<<<< HEAD
       <recent name="com.tw.step8.assignment5" />
+=======
+      <recent name="com.tw.step8.assignment4" />
+      <recent name="com.tw.step8.assignment4.exception" />
+>>>>>>> 989d404d1e652ffcd75df2fb1a8fc757c57386fa
       <recent name="com.tw.step8.assingment3" />
       <recent name="com.tw.step8.assingment3.units" />
       <recent name="com.tw.step8.assignment2" />
@@ -58,11 +67,16 @@
       <recent name="" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.tw.step8.assignment4" />
       <recent name="com.tw.step8.assingment3" />
       <recent name="com.tw.step8.assignment1" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+<<<<<<< HEAD
       <recent name="com.tw.step8.assignment5" />
+=======
+      <recent name="com.tw.step8.assignment4" />
+>>>>>>> 989d404d1e652ffcd75df2fb1a8fc757c57386fa
       <recent name="com.tw.step8.assingment3" />
       <recent name="com.tw.step8.assignment2" />
       <recent name="com.tw.step8.assignment1" />
