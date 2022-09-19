@@ -6,7 +6,7 @@ public enum Color {
     GREEN(){
         private final static int MAX_GREEN_BALLS = 3;
         @Override
-        public void validateAdditionOfNewBall(Countable balls) throws AddBallException {
+        public void validateAdditionOfNewBall(Queryable balls) throws AddBallException {
             super.validateAdditionOfNewBall(balls);
 
             int presentNoOfBalls = balls.getSizeOf(this);
@@ -17,7 +17,7 @@ public enum Color {
     },
     RED(){
         @Override
-        public void validateAdditionOfNewBall(Countable balls) throws AddBallException {
+        public void validateAdditionOfNewBall(Queryable balls) throws AddBallException {
             super.validateAdditionOfNewBall(balls);
             int noOfGreenBalls = balls.getSizeOf(Color.GREEN);
             int noOfRedBalls = balls.getSizeOf(Color.RED);
@@ -29,7 +29,7 @@ public enum Color {
     },
     YELLOW(){
         @Override
-        public void validateAdditionOfNewBall(Countable balls) throws AddBallException {
+        public void validateAdditionOfNewBall(Queryable balls) throws AddBallException {
             super.validateAdditionOfNewBall(balls);
 
             int noOfYellowAfterAddition = balls.getSizeOf(Color.YELLOW) + 1;
@@ -43,25 +43,25 @@ public enum Color {
     },
     BLACK(){
         @Override
-        public void validateAdditionOfNewBall(Countable balls) throws AddBallException {
+        public void validateAdditionOfNewBall(Queryable balls) throws AddBallException {
             super.validateAdditionOfNewBall(balls);
 
-            if (balls.getSizeOf(Color.BLUE) > 0){
+            if (balls.isPresent(Color.BLUE)){
                 throw new BlueAndBlackBallsTogetherException();
             }
         }
     }, BLUE(){
         @Override
-        public void validateAdditionOfNewBall(Countable balls) throws AddBallException {
+        public void validateAdditionOfNewBall(Queryable balls) throws AddBallException {
             super.validateAdditionOfNewBall(balls);
 
-            if (balls.getSizeOf(Color.BLACK) > 0){
+            if (balls.isPresent(Color.BLACK)){
                 throw new BlueAndBlackBallsTogetherException();
             }
         }
     };
 
-    public void validateAdditionOfNewBall(Countable balls) throws AddBallException {
+    public void validateAdditionOfNewBall(Queryable balls) throws AddBallException {
         if (balls.isFull()) {
             throw new BagLimitExceededException();
         }

@@ -5,7 +5,7 @@ import com.tw.step8.assignment5.exception.AddBallException;
 import java.util.HashSet;
 import java.util.stream.Collectors;
 
-public class Balls implements Countable {
+public class Balls implements Queryable {
     private final HashSet<Ball> balls;
     private final int capacity;
 
@@ -31,6 +31,11 @@ public class Balls implements Countable {
     @Override
     public boolean isFull() {
         return this.balls.size() == capacity;
+    }
+
+    @Override
+    public boolean isPresent(Color color) {
+        return this.getSizeOf(color) > 0;
     }
 
     public boolean add(Ball ball) throws AddBallException {
