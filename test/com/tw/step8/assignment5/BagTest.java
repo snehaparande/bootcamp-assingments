@@ -57,4 +57,12 @@ class BagTest {
 
         assertThrows(RedBallSizeExceededException.class,()->bag.add(thirdRedBall));
     }
+
+    @Test
+    void shouldNotAddYellowBallsMoreThan40PercentOfCurrentCapacity() {
+        Bag bag = new Bag(12);
+        Ball yellowBall = new Ball(Color.YELLOW);
+
+//        assertThrows(YellException.class,()->bag.add(yellowBall));
+    }
 }

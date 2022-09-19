@@ -1,7 +1,7 @@
 package com.tw.step8.assignment5;
 
 public enum Color {
-    GREEN(3), RED(12);
+    GREEN(3), RED(12), YELLOW(12);
 
     private final int maxBalls;
 
