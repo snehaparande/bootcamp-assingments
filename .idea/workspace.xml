@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45fb0829-2930-4a50-b695-3392ea0efc3e" name="Changes" comment="Introduced Rectangle entity which can give area.">
+      <change afterPath="$PROJECT_DIR$/src/com/tw/step8/assignment5/Bag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/com/tw/step8/assignment5/BagTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/tw/step8/assingment3/Volume.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tw/step8/assingment3/Volume.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/tw/step8/assingment3/VolumeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/tw/step8/assingment3/VolumeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +49,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.tw.step8.assignment5" />
       <recent name="com.tw.step8.assingment3" />
       <recent name="com.tw.step8.assingment3.units" />
       <recent name="com.tw.step8.assignment2" />
@@ -61,13 +62,14 @@
       <recent name="com.tw.step8.assignment1" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.tw.step8.assignment5" />
       <recent name="com.tw.step8.assingment3" />
       <recent name="com.tw.step8.assignment2" />
       <recent name="com.tw.step8.assignment1" />
       <recent name="com.tw.step8" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AllTests">
+  <component name="RunManager" selected="JUnit.BagTest.shouldAddBallInTheBag">
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.tw.step8.Main" />
       <module name="bootcamp-assignments" />
@@ -85,10 +87,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BagTest.shouldAddBallInTheBag" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bootcamp-assignments" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tw.step8.assignment5.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tw.step8.assignment5" />
+      <option name="MAIN_CLASS_NAME" value="com.tw.step8.assignment5.BagTest" />
+      <option name="METHOD_NAME" value="shouldAddBallInTheBag" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.AllTests" />
+      <item itemvalue="JUnit.BagTest.shouldAddBallInTheBag" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.BagTest.shouldAddBallInTheBag" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
