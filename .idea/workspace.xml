@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="45fb0829-2930-4a50-b695-3392ea0efc3e" name="Changes" comment="Introduced Rectangle entity which can give area.">
-      <change afterPath="$PROJECT_DIR$/src/com/tw/step8/assignment5/Bag.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/com/tw/step8/assignment5/BagTest.java" afterDir="false" />
+    <list default="true" id="45fb0829-2930-4a50-b695-3392ea0efc3e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/tw/step8/assignment5/Color.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tw/step8/assignment5/exception/BagLimitExceededException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/tw/step8/assignment5/exception/IdenticalBallLimitExceededException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-<<<<<<< HEAD
-=======
-      <change beforePath="$PROJECT_DIR$/src/com/tw/step8/assignment4/ParkingLot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tw/step8/assignment4/ParkingLot.java" afterDir="false" />
->>>>>>> 989d404d1e652ffcd75df2fb1a8fc757c57386fa
+      <change beforePath="$PROJECT_DIR$/src/com/tw/step8/assignment5/Bag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tw/step8/assignment5/Bag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/tw/step8/assignment5/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tw/step8/assignment5/Ball.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/tw/step8/assignment5/BagTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/tw/step8/assignment5/BagTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,10 +18,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
         <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -53,12 +53,10 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
-<<<<<<< HEAD
+      <recent name="com.tw.step8.assignment5.exception" />
       <recent name="com.tw.step8.assignment5" />
-=======
       <recent name="com.tw.step8.assignment4" />
       <recent name="com.tw.step8.assignment4.exception" />
->>>>>>> 989d404d1e652ffcd75df2fb1a8fc757c57386fa
       <recent name="com.tw.step8.assingment3" />
       <recent name="com.tw.step8.assingment3.units" />
       <recent name="com.tw.step8.assignment2" />
@@ -72,18 +70,15 @@
       <recent name="com.tw.step8.assignment1" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
-<<<<<<< HEAD
       <recent name="com.tw.step8.assignment5" />
-=======
       <recent name="com.tw.step8.assignment4" />
->>>>>>> 989d404d1e652ffcd75df2fb1a8fc757c57386fa
       <recent name="com.tw.step8.assingment3" />
       <recent name="com.tw.step8.assignment2" />
       <recent name="com.tw.step8.assignment1" />
       <recent name="com.tw.step8" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BagTest.shouldAddBallInTheBag">
+  <component name="RunManager" selected="JUnit.BagTest">
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.tw.step8.Main" />
       <module name="bootcamp-assignments" />
@@ -97,6 +92,21 @@
       <option name="MAIN_CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BagTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="bootcamp-assignments" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tw.step8.assignment5.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tw.step8.assignment5" />
+      <option name="MAIN_CLASS_NAME" value="com.tw.step8.assignment5.BagTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -117,13 +127,48 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BagTest.shouldThrowExceptionWhenMoreThan3GreenBallsAreAdded" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bootcamp-assignments" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tw.step8.assignment5.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tw.step8.assignment5" />
+      <option name="MAIN_CLASS_NAME" value="com.tw.step8.assignment5.BagTest" />
+      <option name="METHOD_NAME" value="shouldThrowExceptionWhenMoreThan3GreenBallsAreAdded" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.tw.step8.assignment5 in bootcamp-assignments" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bootcamp-assignments" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tw.step8.assignment5.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.tw.step8.assignment5" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.BagTest" />
       <item itemvalue="JUnit.AllTests" />
+      <item itemvalue="JUnit.BagTest.shouldThrowExceptionWhenMoreThan3GreenBallsAreAdded" />
+      <item itemvalue="JUnit.com.tw.step8.assignment5 in bootcamp-assignments" />
       <item itemvalue="JUnit.BagTest.shouldAddBallInTheBag" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BagTest.shouldThrowExceptionWhenMoreThan3GreenBallsAreAdded" />
+        <item itemvalue="JUnit.com.tw.step8.assignment5 in bootcamp-assignments" />
         <item itemvalue="JUnit.BagTest.shouldAddBallInTheBag" />
       </list>
     </recent_temporary>
