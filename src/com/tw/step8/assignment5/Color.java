@@ -40,6 +40,25 @@ public enum Color {
                 throw new YellowBallsSizeExceededException();
             }
         }
+    },
+    BLACK(){
+        @Override
+        public void validateAdditionOfNewBall(Countable balls) throws AddBallException {
+            super.validateAdditionOfNewBall(balls);
+
+            if (balls.getSizeOf(Color.BLUE) > 0){
+                throw new BlueAndBlackBallsTogetherException();
+            }
+        }
+    }, BLUE(){
+        @Override
+        public void validateAdditionOfNewBall(Countable balls) throws AddBallException {
+            super.validateAdditionOfNewBall(balls);
+
+            if (balls.getSizeOf(Color.BLACK) > 0){
+                throw new BlueAndBlackBallsTogetherException();
+            }
+        }
     };
 
     public void validateAdditionOfNewBall(Countable balls) throws AddBallException {

@@ -75,4 +75,18 @@ class BagTest {
 
         assertTrue(bag.add(yellowBall));
     }
+
+    @Test
+    void ShouldAddEitherOfBlackOrBlue() throws AddBallException {
+        Bag firstBag = new Bag(12);
+        Bag secondBag = new Bag(12);
+        Ball blackBall = new Ball(Color.BLACK);
+        Ball blueBall = new Ball(Color.BLUE);
+
+        firstBag.add(blackBall);
+        secondBag.add(blueBall);
+
+        assertThrows(BlueAndBlackBallsTogetherException.class,() -> firstBag.add(blueBall));
+        assertThrows(BlueAndBlackBallsTogetherException.class,() -> secondBag.add(blackBall));
+    }
 }
