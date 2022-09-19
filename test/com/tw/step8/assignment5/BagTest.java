@@ -1,9 +1,6 @@
 package com.tw.step8.assignment5;
 
-import com.tw.step8.assignment5.exception.AddBallException;
-import com.tw.step8.assignment5.exception.BagLimitExceededException;
-import com.tw.step8.assignment5.exception.IdenticalBallLimitExceededException;
-import com.tw.step8.assignment5.exception.RedBallSizeExceededException;
+import com.tw.step8.assignment5.exception.*;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -55,7 +52,7 @@ class BagTest {
         bag.add(firstRedBall);
         bag.add(secondRedBall);
 
-        assertThrows(RedBallSizeExceededException.class,()->bag.add(thirdRedBall));
+        assertThrows(RedBallsSizeExceededException.class,()->bag.add(thirdRedBall));
     }
 
     @Test
@@ -63,6 +60,19 @@ class BagTest {
         Bag bag = new Bag(12);
         Ball yellowBall = new Ball(Color.YELLOW);
 
-//        assertThrows(YellException.class,()->bag.add(yellowBall));
+        assertThrows(YellowBallsSizeExceededException.class,()->bag.add(yellowBall));
+    }
+
+    @Test
+    void shouldAddYellowBallsWhenTheyAreLessThan40PercentOfCurrentCapacity() throws AddBallException {
+        Bag bag = new Bag(12);
+        Ball greenBall = new Ball(Color.GREEN);
+        Ball redBall = new Ball(Color.RED);
+        Ball yellowBall = new Ball(Color.YELLOW);
+
+        bag.add(greenBall);
+        bag.add(redBall);
+
+        assertTrue(bag.add(yellowBall));
     }
 }

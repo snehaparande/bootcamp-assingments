@@ -7,10 +7,6 @@ public class Ball {
         this.color = color;
     }
 
-    public int getMaxCapacity(){
-        return this.color.getMaxBalls();
-    }
-
     boolean isSameColor(Color color){
         return this.color.equals(color);
     }

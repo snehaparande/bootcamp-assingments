@@ -1,23 +1,21 @@
 package com.tw.step8.assignment5;
 
-import com.tw.step8.assignment5.exception.AddBallException;
-import com.tw.step8.assignment5.exception.BagLimitExceededException;
-import com.tw.step8.assignment5.exception.IdenticalBallLimitExceededException;
-import com.tw.step8.assignment5.exception.RedBallSizeExceededException;
+import com.tw.step8.assignment5.exception.*;
 
 public enum Color {
-    GREEN(3){
+    GREEN(){
+        private final static int MAX_GREEN_BALLS = 3;
         @Override
         public void validateAdditionOfNewBall(Countable balls) throws AddBallException {
             super.validateAdditionOfNewBall(balls);
 
             int presentNoOfBalls = balls.getSizeOf(this);
-            if (presentNoOfBalls == this.getMaxBalls()) {
-                throw new IdenticalBallLimitExceededException(this.getMaxBalls(), this.toString());
+            if (presentNoOfBalls == MAX_GREEN_BALLS) {
+                throw new IdenticalBallLimitExceededException(MAX_GREEN_BALLS, this.toString());
             }
         }
     },
-    RED(12){
+    RED(){
         @Override
         public void validateAdditionOfNewBall(Countable balls) throws AddBallException {
             super.validateAdditionOfNewBall(balls);
@@ -25,21 +23,24 @@ public enum Color {
             int noOfRedBalls = balls.getSizeOf(Color.RED);
 
             if (noOfGreenBalls * 2 == noOfRedBalls) {
-                throw new RedBallSizeExceededException();
+                throw new RedBallsSizeExceededException();
             }
         }
     },
-    YELLOW(12);
+    YELLOW(){
+        @Override
+        public void validateAdditionOfNewBall(Countable balls) throws AddBallException {
+            super.validateAdditionOfNewBall(balls);
 
-    private final int maxBalls;
+            int noOfYellowAfterAddition = balls.getSizeOf(Color.YELLOW) + 1;
+            int totalAfterAddition = balls.getTotalSize() + 1;
+            double yellowBallsPercentage = (double) noOfYellowAfterAddition / totalAfterAddition;
 
-    Color(int maxBalls) {
-        this.maxBalls = maxBalls;
-    }
-
-    public int getMaxBalls() {
-        return maxBalls;
-    }
+            if (yellowBallsPercentage > 0.4) {
+                throw new YellowBallsSizeExceededException();
+            }
+        }
+    };
 
     public void validateAdditionOfNewBall(Countable balls) throws AddBallException {
         if (balls.isFull()) {
