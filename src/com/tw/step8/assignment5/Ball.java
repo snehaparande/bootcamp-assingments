@@ -11,8 +11,8 @@ public class Ball {
         return this.color.getMaxBalls();
     }
 
-    boolean isSameColor(Ball otherBall){
-        return this.color.equals(otherBall.color);
+    boolean isSameColor(Color color){
+        return this.color.equals(color);
     }
 
     public Color getColor() {
